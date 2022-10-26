@@ -6,8 +6,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import Cart from "./components/Cart";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import CardsDetail from "./components/CardsDetail";
 import NotFound from "./components/NotFound";
 
 
@@ -18,8 +18,8 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/" element={<Cart />} />
+          <Route path="/cardsDetail" element={<CardsDetail />} />
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Routes>
