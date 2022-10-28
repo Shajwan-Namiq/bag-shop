@@ -14,7 +14,7 @@ import NotFound from "./components/NotFound";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      
         <Navbar />
 
         <Routes>
@@ -23,7 +23,7 @@ function App() {
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Routes>
-      </BrowserRouter>
+      
     </div>
   );
 }
