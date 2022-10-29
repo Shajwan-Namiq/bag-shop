@@ -57,7 +57,7 @@ function Cart({ id, title, image, price, description, category, rating }) {
                   )
                 }
                 type="button"
-                className="text-sm font-medium text-black mt-4 flex w-full items-center justify-center rounded-sm bg-yellow-500 hover:bg-yellow-600 px-8 py-4"
+                className="text-sm font-bold text-white mt-4 flex w-full items-center justify-center rounded-sm bg-yellow-500 hover:bg-yellow-400 px-8 py-4"
               >
                 {" "}
                 Add to Cart

@@ -16,12 +16,12 @@ function Total() {
   };
 
   return (
-    <div className="total">
-      <h2>ORDER SUMMARY</h2>
+    <div className="p-2 text-gray-600">
+      <h2 className="text-lg mb-2">ORDER SUMMARY</h2>
       <div>
         <p className="total__p">
-          total ({getTotal().totalQuantity} items) :{" "}
-          <strong>${getTotal().totalPrice}</strong>
+          total (<span className="text-red-600">{getTotal().totalQuantity} items</span>) :{" "}
+          <strong className="text-yellow-600">${getTotal().totalPrice}</strong>
         </p>
       </div>
     </div>
