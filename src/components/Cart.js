@@ -3,9 +3,8 @@ import { useState } from 'react';
 import { useDispatch } from "react-redux";
  import { addToCart } from "../redux/cartSlice";
 
-function Cart({ id, title, image, price }) {
+function Cart({ id, title, image, price, description, category, rating }) {
   const dispatch = useDispatch();
-  
 
   return (
     <section>
@@ -46,11 +45,14 @@ function Cart({ id, title, image, price }) {
               <button
                 onClick={() =>
                   dispatch(
-                    addToCart({
+                  addToCart({
                       id,
                       title,
                       image,
                       price,
+                      description,
+                      category,
+                      rating,
                     })
                   )
                 }

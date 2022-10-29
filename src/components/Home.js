@@ -17,6 +17,9 @@ function Home() {
                   title={item.title}
                   price={item.price}
                   image={item.image}
+                  description={item.description}
+                  category={item.category}
+                  rating={item.rating}
                 />
               </>
             );

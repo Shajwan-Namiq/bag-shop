@@ -10,6 +10,9 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import CardsDetail from "./components/CardsDetail";
 import NotFound from "./components/NotFound";
+import CartValue from "./components/CartValue";
+
+
 
 function App() {
 
@@ -18,6 +21,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route path="/cartValue" element={<CartValue />} />
         <Route path="/" element={<Home />} />
         <Route path="/cart/:id" element={<Cart />} />
         <Route path="/cardsDetail" element={<CardsDetail />} />

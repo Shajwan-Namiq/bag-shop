@@ -2,14 +2,17 @@ import React from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {Link} from "react-router-dom"
+ import Total from "./Total";
+ import { useNavigate } from "react-router-dom";
+
  
-
-
 const Navbar = () => {
- 
+  const navigate = useNavigate();
+
 const cart = useSelector((state) => state.cart);
 
 
+//bag shop icon number
   const getTotalQuantity = () => {
     let total = 0;
     cart.forEach((item) => {
@@ -36,7 +39,7 @@ const cart = useSelector((state) => state.cart);
         <div className="flex-none">
           <div className="p-2 dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
-              <div className="indicator ">
+              <div className="indicator " onClick={() => navigate("/cartValue")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-9 w-9"
@@ -62,8 +65,10 @@ const cart = useSelector((state) => state.cart);
               className="rounded-sm mt-3 card card-compact dropdown-content  w-96 bg-slate-900 shadow"
             >
               <div className="card-body">
-                <span className="font-bold text-lg">Your cart is empty</span>
-                <span className="text-info">Subtotal: $999</span>
+                <span className="text-info">
+                  {" "}
+                  <Total />
+                </span>
               </div>
             </div>
           </div>
