@@ -1,6 +1,7 @@
 import Total from "./Total";
 import CardsDetail from "./CardsDetail";
 import { useSelector } from "react-redux";
+import  Form from "./Form";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
@@ -31,6 +32,7 @@ function Cart() {
       </div>
       <div className="cart__right">
         <Total />
+        <Form />
       </div>
     </div>
   );

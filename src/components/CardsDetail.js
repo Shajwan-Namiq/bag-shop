@@ -1,4 +1,4 @@
- 
+ import Form from "./Form";
 import {
   incrementQuantity,
   decrementQuantity,
@@ -109,6 +109,8 @@ function CardsDetail({
                 </div>
               </div>
             </div>
+
+            
           </div>
         </div>
       </section>

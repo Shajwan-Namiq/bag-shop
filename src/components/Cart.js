@@ -10,42 +10,57 @@ function Cart({ id, title, image, price, description, category, rating }) {
     <section>
       <div className="mx-auto max-w-screen-xl px-5 py-8">
         <div>
-          <a href="#" className="relative block border border-gray-300">
-            <button
-              type="button"
-              className="absolute right-4 top-4 rounded-full bg-black p-2 text-white"
-            >
-              <span className="sr-only">Wishlist</span>
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                ></path>
-              </svg>
-            </button>
+          <a className="relative block border border-gray-300">
+            <a href="#" class="group relative h-96  w-full block  ">
+              <img
+                alt="Developer"
+                src={image}
+                class="absolute inset-0 h-full w-full object-contain     transition-opacity group-hover:opacity-10"
+              />
 
-            <img
-              alt="name"
-              src={image}
-              className="h-56 w-full object-contain "
-            />
+              <div class="relative py-10 px-5">
+                <button
+                  type="button"
+                  className="absolute right-4 top-4 rounded-full bg-black p-2 text-white"
+                >
+                  <span className="sr-only">Wishlist</span>
+                  <svg
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    ></path>
+                  </svg>
+                </button>
+
+                <button
+                  type="button"
+                  className="absolute left-4 top-4 rounded-full bg-black p-2 text-white"
+                >
+                  ${price}
+                </button>
+                <div class="mt-6 mb-10">
+                  <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                    <p class="text-sm text-slate-900">{description}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
 
             <div className="p-6">
-              <h3 className="mb-9 text-sm font-bold text-gray-800">{title}</h3>
-              <p className="text-sm font-bold text-slate-800">${price}</p>
-
+              <h3 className="mb-3 text-sm font-bold text-gray-800">{title}</h3>
+            
               <button
                 onClick={() =>
                   dispatch(
-                  addToCart({
+                    addToCart({
                       id,
                       title,
                       image,

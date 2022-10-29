@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import CardsDetail from "./components/CardsDetail";
 import NotFound from "./components/NotFound";
 import CartValue from "./components/CartValue";
+import Form from "./components/Form";
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/cartValue" element={<CartValue />} />
         <Route path="/" element={<Home />} />
+        <Route path="/form" element={<Form />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/cardsDetail" element={<CardsDetail />} />
         <Route path="/not-found" element={<NotFound />} />
