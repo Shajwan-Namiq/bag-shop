@@ -15,7 +15,7 @@ function Cart({ id, title, image, price, description, category, rating }) {
               <img
                 alt="Developer"
                 src={image}
-                class="absolute inset-0 h-full w-full object-contain     transition-opacity group-hover:opacity-10"
+                class="absolute inset-0 h-full w-full object-contain     transition-opacity group-hover:opacity-10 "
               />
 
               <div class="relative py-10 px-5">
@@ -47,14 +47,14 @@ function Cart({ id, title, image, price, description, category, rating }) {
                   ${price}
                 </button>
                 <div class="mt-6 mb-10">
-                  <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                  <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 ">
                     <p class="text-sm text-slate-900">{description}</p>
                   </div>
                 </div>
               </div>
             </a>
 
-            <div className="p-6">
+            <div className="p-6 ">
               <h3 className="mb-3 text-sm font-bold text-gray-800">{title}</h3>
             
               <button
