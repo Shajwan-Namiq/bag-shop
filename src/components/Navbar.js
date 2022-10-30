@@ -63,7 +63,7 @@ const Navbar = () => {
                   <Total />
                 </span>
 
-                <div class="card-actions">
+                <div className="card-actions">
                   <button
                     onClick={() => navigate("/cartValue")}
                     className="btn text-white bg-gray-800 btn-block"

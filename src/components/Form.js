@@ -3,73 +3,73 @@ import React from 'react'
 function Form() {
   return (
     <div className="bg-[#edede992]">
-      <h1 class="py-4 text-lg font-bold   text-slate-900 text-center uppercase">
+      <h1 className="py-4 text-lg font-bold   text-slate-900 text-center uppercase">
         Checkout
       </h1>
-      <div class=" py-5 md:py-10 text-slate-900">
-        <div class="mx-auto max-w-lg px-4 lg:px-8">
-          <form class="grid grid-cols-6 gap-4">
-            <div class="col-span-3">
-              <label class="mb-1 block text-sm text-gray-600" for="first_name">
+      <div className=" py-5 md:py-10 text-slate-900">
+        <div className="mx-auto max-w-lg px-4 lg:px-8">
+          <form className="grid grid-cols-6 gap-4">
+            <div className="col-span-3">
+              <label className="mb-1 block text-sm text-gray-600" for="first_name">
                 First Name
               </label>
 
               <input
-                class="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
+                className="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
                 type="text"
                 id="first_name"
               />
             </div>
 
-            <div class="col-span-3">
-              <label class="mb-1 block text-sm text-gray-600" for="last_name">
+            <div className="col-span-3">
+              <label className="mb-1 block text-sm text-gray-600" for="last_name">
                 Last Name
               </label>
 
               <input
-                class="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
+                className="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
                 type="text"
                 id="last_name"
               />
             </div>
 
-            <div class="col-span-6">
-              <label class="mb-1 block text-sm text-gray-600" for="email">
+            <div className="col-span-6">
+              <label className="mb-1 block text-sm text-gray-600" for="email">
                 Email
               </label>
 
               <input
-                class="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
+                className="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
                 type="email"
                 id="email"
               />
             </div>
 
-            <div class="col-span-6">
-              <label class="mb-1 block text-sm text-gray-600" for="phone">
+            <div className="col-span-6">
+              <label className="mb-1 block text-sm text-gray-600" for="phone">
                 Phone
               </label>
 
               <input
-                class="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
+                className="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
                 type="tel"
                 id="phone"
               />
             </div>
 
-            <fieldset class="col-span-6">
-              <legend class="mb-1 block text-sm text-gray-600">
+            <fieldset className="col-span-6">
+              <legend className="mb-1 block text-sm text-gray-600">
                 Card Details
               </legend>
 
-              <div class=" -space-y-px rounded-lg bg-white shadow-sm">
+              <div className=" -space-y-px rounded-lg bg-white shadow-sm">
                 <div>
-                  <label class="  sr-only" for="card-number">
+                  <label className="  sr-only" for="card-number">
                     Card Number
                   </label>
 
                   <input
-                    class="relative w-full rounded-t-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
+                    className="relative w-full rounded-t-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
                     type="text"
                     name="card-number"
                     id="card-number"
@@ -77,14 +77,14 @@ function Form() {
                   />
                 </div>
 
-                <div class="flex -space-x-px">
-                  <div class="flex-1">
-                    <label class="sr-only" for="card-expiration-date">
+                <div className="flex -space-x-px">
+                  <div className="flex-1">
+                    <label className="sr-only" for="card-expiration-date">
                       Expiration Date
                     </label>
 
                     <input
-                      class="relative w-full rounded-bl-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
+                      className="relative w-full rounded-bl-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
                       type="text"
                       name="card-expiration-date"
                       id="card-expiration-date"
@@ -92,13 +92,13 @@ function Form() {
                     />
                   </div>
 
-                  <div class="flex-1">
-                    <label class="sr-only" for="card-cvc">
+                  <div className="flex-1">
+                    <label className="sr-only" for="card-cvc">
                       CVC
                     </label>
 
                     <input
-                      class="relative w-full rounded-br-lg border-gray-200  border-2  p-2.5 text-sm placeholder-gray-400 focus:z-10"
+                      className="relative w-full rounded-br-lg border-gray-200  border-2  p-2.5 text-sm placeholder-gray-400 focus:z-10"
                       type="text"
                       name="card-cvc"
                       id="card-cvc"
@@ -109,22 +109,22 @@ function Form() {
               </div>
             </fieldset>
 
-            <fieldset class="col-span-6">
-              <legend class="mb-1 block text-sm text-gray-600">
+            <fieldset className="col-span-6">
+              <legend className="mb-1 block text-sm text-gray-600">
                 Billing Address
               </legend>
 
-              <div class="-space-y-px rounded-lg bg-white shadow-sm">
+              <div className="-space-y-px rounded-lg bg-white shadow-sm">
                 <div>
-                  <label class="sr-only" for="country">
+                  <label className="sr-only" htmlFor="country">
                     Country
                   </label>
 
                   <select
-                    class="relative w-full rounded-t-lg border-gray-200  border-2 p-2.5 text-sm focus:z-10"
+                    className="relative w-full rounded-t-lg border-gray-200  border-2 p-2.5 text-sm focus:z-10"
                     id="country"
                     name="country"
-                    autocomplete="country-name"
+                    autoComplete="country-name"
                   >
                     <option>Iraq</option>
                     <option>Iran</option>
@@ -136,12 +136,12 @@ function Form() {
                 </div>
 
                 <div>
-                  <label class="sr-only" for="postal-code">
+                  <label className="sr-only" for="postal-code">
                     ZIP/Post Code
                   </label>
 
                   <input
-                    class="relative w-full rounded-b-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
+                    className="relative w-full rounded-b-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
                     type="text"
                     name="postal-code"
                     id="postal-code"
@@ -152,9 +152,9 @@ function Form() {
               </div>
             </fieldset>
 
-            <div class="col-span-6">
+            <div className="col-span-6">
               <button
-                class="block w-full rounded-lg bg-black p-2.5 text-sm text-white"
+                className="block w-full rounded-lg bg-black p-2.5 text-sm text-white"
                 type="submit"
               >
                 Pay Now

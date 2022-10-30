@@ -1,4 +1,4 @@
- import Form from "./Form";
+ 
  import { useState ,useEffect} from "react";
 import {
   incrementQuantity,
@@ -16,9 +16,10 @@ function CardsDetail({
   rating,
   category,
   quantity = 0,
+  
 }) {
   const dispatch = useDispatch();
-
+ //console.log("quantity: ",quantity);
   const [newPrice, Setnewprice] = useState(price);
   //find total price for each product
   useEffect(() => {
@@ -30,44 +31,44 @@ function CardsDetail({
 
   return (
     <>
-      <div class="bg-gray-50">
-        <div class="mx-auto max-w-lg px-4 lg:px-8">
-          <div class="mt-12">
-            <div class="flow-root">
-              <ul class="-my-4 divide-y divide-gray-700">
-                <li class="flex items-center justify-between py-4">
-                  <div class="flex items-start">
+      <div className="bg-gray-50">
+        <div className="mx-auto max-w-lg px-4 lg:px-8">
+          <div className="mt-12">
+            <div className="flow-root">
+              <ul className="-my-4 divide-y divide-gray-700">
+                <li className="flex items-center justify-between py-4">
+                  <div className="flex items-start">
                     <img
                       alt="name"
                       src={image}
-                      class="h-32 w-32    flex-shrink-0 rounded-lg object-cover"
+                      className="h-32 w-32    flex-shrink-0 rounded-lg object-cover"
                     />
 
-                    <div class="ml-4 text-slate-900">
-                      <p class="text-sm">{title}</p>
+                    <div className="ml-4 text-slate-900">
+                      <p className="text-sm">{title}</p>
 
-                      <dl class="mt-2 space-y-2 text-xs text-gray-500">
+                      <dl className="mt-2 space-y-2 text-xs text-gray-500">
                         <div>
-                          <dt class="inline text-gray-400 ">category: </dt>
-                          <dd class="inline">{category}</dd>
+                          <dt className="inline text-gray-400 ">category: </dt>
+                          <dd className="inline">{category}</dd>
                         </div>
 
                         <div>
-                          <dt class="inline text-gray-400 ">Price: </dt>
-                          <dd class="inline text-yellow-500 font-bold text-base">
+                          <dt className="inline text-gray-400 ">Price: </dt>
+                          <dd className="inline text-yellow-500 font-bold text-base">
                             $ {newPrice}
                           </dd>
                         </div>
 
                         <div>
                           <div className="flex my-3 ">
-                            <p class="inline text-gray-400">Quantity: </p>
+                            <p className="inline text-gray-400">Quantity: </p>
                             <div className="flex px-3">
                               <button
                                 onClick={() => dispatch(decrementQuantity(id))}
                               >
                                 <svg
-                                  class="fill-current text-gray-600 w-3"
+                                  className="fill-current text-gray-600 w-3"
                                   viewBox="0 0 448 512"
                                 >
                                   <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -80,7 +81,7 @@ function CardsDetail({
                                 onClick={() => dispatch(incrementQuantity(id))}
                               >
                                 <svg
-                                  class="fill-current text-gray-600 w-3"
+                                  className="fill-current text-gray-600 w-3"
                                   viewBox="0 0 448 512"
                                 >
                                   <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
