@@ -1,11 +1,35 @@
 import React from "react";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import data from "../data";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const toastList = new Set();
+const MAX_TOAST = 3;
+ 
+function notify() {
+  let toastIdToDismiss = null;
+  if (toastList.size === MAX_TOAST) {
+    const arr = Array.from(toastList);
+    const toastId = arr[0];
+    if (toastId) {
+      toastIdToDismiss = toastId;
+    }
+    // toast.dismiss(toastId);
+  }
+
+  const id = toast.success("Congrats! You added an order", {});
+  toastList.add(id);
+}
 
 function Cart() {
+  //adding product to shopping cart
   const dispatch = useDispatch();
+
+  const style = {
+  
+  };
 
   return (
     <section className="">
@@ -17,7 +41,7 @@ function Cart() {
             Recently Viewed
           </h2>
         </div>
-        
+
         <div className="py-5  px-5 lg:px-20 grid grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-3 ">
           {data.map((item) => {
             const { id, price, title, description, image, category, rating } =
@@ -63,7 +87,9 @@ function Cart() {
                       </button>
                       <div className="mt-6 mb-10">
                         <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 ">
-                          <p className="text-sm text-slate-900">{description}</p>
+                          <p className="text-sm text-slate-900">
+                            {description}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -75,7 +101,11 @@ function Cart() {
                     </h3>
 
                     <button
-                      onClick={() =>
+                      type="button"
+                      className="text-sm font-bold text-white mt-4 flex w-full items-center justify-center rounded-sm bg-yellow-500 hover:bg-yellow-400 px-8 py-4"
+                      style={style}
+                      onClick={() => {
+                        notify({});
                         dispatch(
                           addToCart({
                             id,
@@ -86,12 +116,9 @@ function Cart() {
                             category,
                             rating,
                           })
-                        )
-                      }
-                      type="button"
-                      className="text-sm font-bold text-white mt-4 flex w-full items-center justify-center rounded-sm bg-yellow-500 hover:bg-yellow-400 px-8 py-4"
+                        );
+                      }}
                     >
-                      {" "}
                       Add to Cart
                       <svg
                         className="ml-1.5 h-5 w-5"
@@ -113,6 +140,20 @@ function Cart() {
               </>
             );
           })}
+          <ToastContainer
+            position="top-right"
+            hideProgressBar={true}
+            autoClose="1500"
+            newestOnTop={true}
+            closeOnClick={true}
+            draggable={false}
+            rtl={false}
+            toastStyle={{
+              backgroundColor: "white",
+              color: "#84a98c",
+              fontWeight: "bold",
+            }}
+          />
         </div>
       </div>
     </section>
