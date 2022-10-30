@@ -1,17 +1,12 @@
 import React from 'react'
 
+
 function Form() {
   return (
-    <div>
-    
-<section>
-  <h1 class="sr-only">Checkout</h1>
+    <>
+      <h1 class="sr-only">Checkout</h1>
 
-  <div class="relative mx-auto max-w-screen-2xl">
-    <div class="grid grid-cols-1 md:grid-cols-2">
-     
-
-      <div class="bg-white py-12 md:py-24">
+      <div class="bg-[#edede992]  py-12 md:py-24 text-slate-900">
         <div class="mx-auto max-w-lg px-4 lg:px-8">
           <form class="grid grid-cols-6 gap-4">
             <div class="col-span-3">
@@ -20,7 +15,7 @@ function Form() {
               </label>
 
               <input
-                class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm"
+                class="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
                 type="text"
                 id="first_name"
               />
@@ -32,7 +27,7 @@ function Form() {
               </label>
 
               <input
-                class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm"
+                class="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
                 type="text"
                 id="last_name"
               />
@@ -44,7 +39,7 @@ function Form() {
               </label>
 
               <input
-                class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm"
+                class="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
                 type="email"
                 id="email"
               />
@@ -56,7 +51,7 @@ function Form() {
               </label>
 
               <input
-                class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm"
+                class="w-full rounded-lg border-gray-200  border-2  p-2.5 text-sm shadow-sm"
                 type="tel"
                 id="phone"
               />
@@ -67,12 +62,14 @@ function Form() {
                 Card Details
               </legend>
 
-              <div class="-space-y-px rounded-lg bg-white shadow-sm">
+              <div class=" -space-y-px rounded-lg bg-white shadow-sm">
                 <div>
-                  <label class="sr-only" for="card-number">Card Number</label>
+                  <label class="  sr-only" for="card-number">
+                    Card Number
+                  </label>
 
                   <input
-                    class="relative w-full rounded-t-lg border-gray-200 p-2.5 text-sm placeholder-gray-400 focus:z-10"
+                    class="relative w-full rounded-t-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
                     type="text"
                     name="card-number"
                     id="card-number"
@@ -87,7 +84,7 @@ function Form() {
                     </label>
 
                     <input
-                      class="relative w-full rounded-bl-lg border-gray-200 p-2.5 text-sm placeholder-gray-400 focus:z-10"
+                      class="relative w-full rounded-bl-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
                       type="text"
                       name="card-expiration-date"
                       id="card-expiration-date"
@@ -96,10 +93,12 @@ function Form() {
                   </div>
 
                   <div class="flex-1">
-                    <label class="sr-only" for="card-cvc">CVC</label>
+                    <label class="sr-only" for="card-cvc">
+                      CVC
+                    </label>
 
                     <input
-                      class="relative w-full rounded-br-lg border-gray-200 p-2.5 text-sm placeholder-gray-400 focus:z-10"
+                      class="relative w-full rounded-br-lg border-gray-200  border-2  p-2.5 text-sm placeholder-gray-400 focus:z-10"
                       type="text"
                       name="card-cvc"
                       id="card-cvc"
@@ -117,20 +116,22 @@ function Form() {
 
               <div class="-space-y-px rounded-lg bg-white shadow-sm">
                 <div>
-                  <label class="sr-only" for="country">Country</label>
+                  <label class="sr-only" for="country">
+                    Country
+                  </label>
 
                   <select
-                    class="relative w-full rounded-t-lg border-gray-200 p-2.5 text-sm focus:z-10"
+                    class="relative w-full rounded-t-lg border-gray-200  border-2 p-2.5 text-sm focus:z-10"
                     id="country"
                     name="country"
                     autocomplete="country-name"
                   >
-                    <option>England</option>
-                    <option>Wales</option>
-                    <option>Scotland</option>
+                    <option>Iraq</option>
+                    <option>Iran</option>
+                    <option>Turkey</option>
                     <option>France</option>
-                    <option>Belgium</option>
-                    <option>Japan</option>
+                    <option>UK</option>
+                    <option>USA</option>
                   </select>
                 </div>
 
@@ -140,7 +141,7 @@ function Form() {
                   </label>
 
                   <input
-                    class="relative w-full rounded-b-lg border-gray-200 p-2.5 text-sm placeholder-gray-400 focus:z-10"
+                    class="relative w-full rounded-b-lg border-gray-200  border-2 p-2.5 text-sm placeholder-gray-400 focus:z-10"
                     type="text"
                     name="postal-code"
                     id="postal-code"
@@ -162,12 +163,8 @@ function Form() {
           </form>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-  
-    </div>
-  )
+    </>
+  );
 }
 
 export default Form

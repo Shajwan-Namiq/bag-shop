@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Total from "./Total";
 import { useNavigate } from "react-router-dom";
+import Image from "./image/logo.png";
+
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -24,13 +26,7 @@ const Navbar = () => {
       <div className="navbar bg-slate-900 bg-opacity-40">
         <div className="flex-1">
           <Link to="/">
-            <img
-              src="https://images.unsplash.com/photo-1602934445884-da0fa1c9d3b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1916&q=80"
-              width="50"
-              height="42"
-              alt=""
-              className="ml-2"
-            />
+            <img src={Image} width="50" height="50" alt="" className="ml-2" />
           </Link>
         </div>
         <div className="flex-none">
@@ -59,7 +55,7 @@ const Navbar = () => {
 
             <div
               tabIndex={0}
-              className="rounded-lg mt-5 card card-compact dropdown-content  w-52 bg-slate-900 shadow"
+              className="rounded-lg mt-5 card card-compact dropdown-content  w-64 bg-slate-900 shadow"
             >
               <div className=" card-body">
                 <span className="text-info">

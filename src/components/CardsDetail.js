@@ -18,12 +18,11 @@ function CardsDetail({
 }) {
   const dispatch = useDispatch();
 
+
   return (
     <>
-      <section>
-        <div class="relative mx-auto max-w-screen-2xl">
-          <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="bg-gray-50">
+    
+     <div class="bg-gray-50">
               <div class="mx-auto max-w-lg px-4 lg:px-8">
                 <div class="mt-12">
                   <div class="flow-root">
@@ -109,11 +108,8 @@ function CardsDetail({
                 </div>
               </div>
             </div>
-
-            
-          </div>
-        </div>
-      </section>
+    
+     
     </>
   );
 }

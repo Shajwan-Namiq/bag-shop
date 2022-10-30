@@ -17,7 +17,7 @@ function Total() {
 
   return (
     <div className="p-5 text-gray-600 ">
-      <h2 className="text-lg mb-2 flex justify-center">ORDER SUMMARY</h2>
+      <h2 className="text-lg mb-2 ">ORDER SUMMARY</h2>
       <div className="flex justify-center">
         <p className="total__p">
           total (
