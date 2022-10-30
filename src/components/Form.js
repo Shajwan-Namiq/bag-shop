@@ -1,12 +1,12 @@
 import React from 'react'
 
-
 function Form() {
   return (
-    <>
-      <h1 class="sr-only">Checkout</h1>
-
-      <div class="bg-[#edede992]  py-12 md:py-24 text-slate-900">
+    <div className="bg-[#edede992]">
+      <h1 class="py-4 text-lg font-bold   text-slate-900 text-center uppercase">
+        Checkout
+      </h1>
+      <div class=" py-5 md:py-10 text-slate-900">
         <div class="mx-auto max-w-lg px-4 lg:px-8">
           <form class="grid grid-cols-6 gap-4">
             <div class="col-span-3">
@@ -163,7 +163,7 @@ function Form() {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
