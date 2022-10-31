@@ -22,7 +22,7 @@ function Total() {
           Total (
           <span className="text-red-600">{getTotal().totalQuantity} Items</span>
           ) :{" "}
-          <strong className="text-yellow-500">${getTotal().totalPrice}</strong>
+          <strong className="text-[#ffba08]">${getTotal().totalPrice}</strong>
         </p>
       </div>
     </div>

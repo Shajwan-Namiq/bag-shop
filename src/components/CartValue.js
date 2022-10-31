@@ -12,7 +12,7 @@ function CartValue() {
       <section>
         <div class="relative mx-auto max-w-screen-2xl">
           <div class="grid grid-cols-1 md:grid-cols-2">
-            <div className="cart__left mt-5">
+            <div className="cart__left lg:mt-5">
               <div>
                 <h3 className="text-center text-slate-900 font-bold text-lg">
                   Shopping Cart

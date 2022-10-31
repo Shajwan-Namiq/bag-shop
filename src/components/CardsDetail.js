@@ -67,7 +67,7 @@ function CardsDetail({
 
                         <div>
                           <dt className="inline text-gray-400 ">Price: </dt>
-                          <dd className="inline text-yellow-500 font-bold text-base">
+                          <dd className="inline text-[#ffba08] font-bold text-base">
                             $ {newPrice}
                           </dd>
                         </div>
