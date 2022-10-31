@@ -1,11 +1,11 @@
- 
- import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 import {
   incrementQuantity,
   decrementQuantity,
   removeItem,
 } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import ReactStars from "react-rating-stars-component";
 
 function CardsDetail({
   id,
@@ -16,10 +16,9 @@ function CardsDetail({
   rating,
   category,
   quantity = 0,
-  
 }) {
   const dispatch = useDispatch();
- //console.log("quantity: ",quantity);
+  //console.log("quantity: ",quantity);
   const [newPrice, Setnewprice] = useState(price);
   //find total price for each product
   useEffect(() => {
@@ -51,6 +50,19 @@ function CardsDetail({
                         <div>
                           <dt className="inline text-gray-400 ">category: </dt>
                           <dd className="inline">{category}</dd>
+                        </div>
+
+                        <div class="text-gray-400 mt-2 flex">
+                          Rating {rating.rate} {"  "}:
+                          <ReactStars
+                            count={5}
+                            value={rating.rate}
+                            edit={false}
+                            isHalf={true}
+                            size={20}
+                            activeColor="#ffba08"
+                            color="gray"
+                          />
                         </div>
 
                         <div>

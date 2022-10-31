@@ -1,8 +1,7 @@
- 
+  
 import { useSelector } from "react-redux";
 
 function Total() {
-   
   const cart = useSelector((state) => state.cart);
 
   const getTotal = () => {

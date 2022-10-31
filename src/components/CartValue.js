@@ -2,11 +2,9 @@ import Total from "./Total";
 import CardsDetail from "./CardsDetail";
 import { useSelector } from "react-redux";
 import Form from "./Form";
- import Bag from "./image/bag.png";
+import Bag from "./image/bag.png";
 
-
-
- function Cart() {
+function CartValue() {
   const cart = useSelector((state) => state.cart);
 
   return (
@@ -63,4 +61,4 @@ import Form from "./Form";
   );
 }
 
-export default Cart;
+export default CartValue;

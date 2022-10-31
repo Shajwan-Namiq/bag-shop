@@ -12,17 +12,13 @@ import NotFound from "./components/NotFound";
 import CartValue from "./components/CartValue";
 import Form from "./components/Form";
 
-
-
 function App() {
-
-
   return (
     <div>
       <Navbar />
       <Routes>
         <Route path="/cartValue" element={<CartValue />} />
-        
+
         <Route path="/form" element={<Form />} />
         <Route path="/" element={<Cart />} />
         <Route path="/cardsDetail" element={<CardsDetail />} />

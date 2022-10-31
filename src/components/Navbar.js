@@ -6,7 +6,6 @@ import Total from "./Total";
 import { useNavigate } from "react-router-dom";
 import Image from "./image/logo.png";
 
-
 const Navbar = () => {
   const navigate = useNavigate();
 
