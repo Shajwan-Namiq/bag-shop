@@ -52,7 +52,7 @@ function CardsDetail({
                           <dd className="inline">{category}</dd>
                         </div>
 
-                        <div class="text-gray-400 mt-2 flex">
+                        <div className="text-gray-400 mt-2 flex">
                           Rating {rating.rate} {"  "}:
                           <ReactStars
                             count={5}

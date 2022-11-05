@@ -122,7 +122,7 @@
 
                <div className="-space-y-px rounded-lg bg-white shadow-sm">
                  <div>
-                   <label className="sr-only" htmlFor="country">
+                   <label className="sr-only" for="country">
                      Country
                    </label>
 

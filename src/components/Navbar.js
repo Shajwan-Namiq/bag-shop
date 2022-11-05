@@ -1,12 +1,15 @@
 import React from "react";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Total from "./Total";
 import { useNavigate } from "react-router-dom";
 import Image from "./image/logo.png";
+import Checkout from "./Checkout";
+ 
+
 
 const Navbar = () => {
+ 
   const navigate = useNavigate();
 
   const cart = useSelector((state) => state.cart);
@@ -28,9 +31,36 @@ const Navbar = () => {
             <img src={Image} width="50" height="50" alt="" className="ml-2" />
           </Link>
         </div>
+
         <div className="flex-none">
-          <div className="p-2 dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle">
+          <Link
+            to="/favourite"
+            className="hover:bg-gray-900 bg-opacity-80 p-3 rounded-full"
+          >
+            <svg
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-labelledby="favouriteIconTitle"
+              stroke="#ffba08"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="#ffba08"
+            >
+              {" "}
+              <title id="favouriteIconTitle">Favourite</title>{" "}
+              <path d="M12,21 L10.55,19.7051771 C5.4,15.1242507 2,12.1029973 2,8.39509537 C2,5.37384196 4.42,3 7.5,3 C9.24,3 10.91,3.79455041 12,5.05013624 C13.09,3.79455041 14.76,3 16.5,3 C19.58,3 22,5.37384196 22,8.39509537 C22,12.1029973 18.6,15.1242507 13.45,19.7149864 L12,21 Z" />{" "}
+            </svg>
+          </Link>
+
+          <div className="p-2 dropdown dropdown-end ">
+            <label
+              tabIndex={0}
+              className="btn btn-ghost btn-circle hover:bg-gray-900 bg-opacity-80 "
+            >
               <div className="indicator ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -54,22 +84,22 @@ const Navbar = () => {
 
             <div
               tabIndex={0}
-              className="rounded-lg mt-5 card card-compact dropdown-content  w-64 bg-slate-900 shadow"
+              className="rounded-lg mt-5 card card-compact dropdown-content  w-80 bg-slate-900 shadow"
             >
               <div className=" card-body">
-                <span className="text-info">
-                  {" "}
-                  <Total />
-                </span>
-
                 <div className="card-actions">
                   <button
                     onClick={() => navigate("/cartValue")}
-                    className="btn text-white bg-gray-800 btn-block"
+                    className="btn uppercase font-bold text-slate-900 bg-white hover:bg-red-900 btn-block"
                   >
                     View cart
                   </button>
                 </div>
+
+                <span className="text-info">
+                  {" "}
+                  <Total />
+                </span>
               </div>
             </div>
           </div>

@@ -1,10 +1,12 @@
-import Total from "./Total";
+
 import CardsDetail from "./CardsDetail";
 import { useSelector } from "react-redux";
 import Form from "./Form";
 import Bag from "./image/bag.png";
+import Total from "./Total";
+import Checkout from "./Checkout";
 
-function CartValue() {
+function CartValue(quantity, price) {
   const cart = useSelector((state) => state.cart);
 
   return (
@@ -48,11 +50,7 @@ function CartValue() {
             </div>
 
             <div className="cart__right mt-5">
-              <div className="bg-[#edede9]">
-                <Total />
-              </div>
-
-              <Form />
+              <Total />
             </div>
           </div>
         </div>
