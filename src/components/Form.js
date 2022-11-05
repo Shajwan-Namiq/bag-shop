@@ -2,13 +2,14 @@
 
  function Form() {
    return (
-     <div className="bg-[#edede992]">
-       <h1 className="py-4 text-lg font-bold   text-slate-900 text-center uppercase">
-         Checkout
-       </h1>
-       <div className=" py-5 md:py-10 text-slate-900">
-         <div className="mx-auto max-w-lg px-4 lg:px-8">
-           <form className="grid grid-cols-6 gap-4">
+     <div className=" bg-white">
+       <div className=" py-10 text-slate-900">
+         <div className="border-2 rounded-lg  px-2 py-5 mx-auto max-w-2xl ">
+           <h1 className="border-b-2 pb-4 mb-10  text-lg font-bold   text-slate-900 text-center uppercase">
+             Checkout
+           </h1>
+
+           <form className=" grid grid-cols-6 gap-4">
              <div className="col-span-3">
                <label
                  className="mb-1 block text-sm text-gray-600"

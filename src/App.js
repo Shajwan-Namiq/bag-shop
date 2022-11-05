@@ -12,7 +12,6 @@ import NotFound from "./components/NotFound";
 import CartValue from "./components/CartValue";
 import Form from "./components/Form";
 import Favourite from "./components/Favourite";
- import Checkout from "./components/Checkout";
  
 
 
@@ -24,7 +23,7 @@ function App() {
         <Route path="/" element={<Cart />} />
         <Route path="/cartValue" element={<CartValue />} />
         <Route path="/favourite" element={<Favourite />} />
-        <Route path="/checkout" element={<Checkout />} />
+        
         <Route path="/form" element={<Form />} />
         <Route path="/cardsDetail" element={<CardsDetail />} />
         <Route path="/not-found" element={<NotFound />} />

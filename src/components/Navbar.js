@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Total from "./Total";
 import { useNavigate } from "react-router-dom";
 import Image from "./image/logo.png";
-import Checkout from "./Checkout";
  
 
 
@@ -87,19 +86,21 @@ const Navbar = () => {
               className="rounded-lg mt-5 card card-compact dropdown-content  w-80 bg-slate-900 shadow"
             >
               <div className=" card-body">
-                <div className="card-actions">
-                  <button
-                    onClick={() => navigate("/cartValue")}
-                    className="btn uppercase font-bold text-slate-900 bg-white hover:bg-red-900 btn-block"
-                  >
-                    View cart
-                  </button>
-                </div>
+             
 
                 <span className="text-info">
                   {" "}
                   <Total />
-                </span>
+                </span>   
+                <div className="mx-4 card-actions">
+                  <button
+                    onClick={() => navigate("/cartValue")}
+                    className="btn uppercase text-base font-bold border border-white hover:text-slate-900 text-white hover:bg-white bg-slate-900 btn-block"
+                  >
+                    View cart
+                  </button>
+                  
+                </div>
               </div>
             </div>
           </div>

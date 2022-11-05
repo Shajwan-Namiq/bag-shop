@@ -1,8 +1,6 @@
   import Checkout from "./Checkout";
 import { useSelector } from "react-redux";
-import CartValue from "./CartValue";
-let quantity=5;
-let price= 500;
+ 
 function Total() {
   const cart = useSelector((state) => state.cart);
 
