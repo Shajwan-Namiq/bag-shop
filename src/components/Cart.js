@@ -32,25 +32,24 @@ function Cart() {
 
   return (
     <section className="">
-      <div className="bg-white">
+      <div className="bg-white dark:text-white dark:bg-slate-900">
         <div className="py-10 relative mx-auto max-w-3xl text-center">
           <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-black/10"></span>
 
-          <h2 className="relative inline-block bg-white px-4 text-center text-2xl font-bold">
+          <h2 className="relative inline-block bg-white dark:text-white dark:bg-slate-900 px-4 text-center text-2xl font-bold">
             Recently Viewed
           </h2>
         </div>
 
         <div className="py-5  px-5 lg:px-20 grid grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-3 ">
           {data.map((item) => {
-            
             const { id, price, title, description, image, category, rating } =
               item;
-            
+
             return (
               <div key={id}>
                 <div className="relative block border border-gray-300">
-                  <a href="#" className="group relative h-96  w-full block  ">
+                  <a href="#" className="bg-white dark:bg-slate-900 group relative h-96  w-full block  ">
                     <img
                       alt="Developer"
                       src={image}
@@ -58,8 +57,7 @@ function Cart() {
                     />
 
                     <div className="relative py-10 px-5">
-                    
-                       <button
+                      <button
                         type="button"
                         className="absolute right-4 top-4 rounded-full bg-black p-2 text-white"
                         onClick={() => {
@@ -74,7 +72,7 @@ function Cart() {
                               category,
                               rating,
                             })
-                          ); 
+                          );
                         }}
                       >
                         <span className="sr-only">Wishlist</span>
@@ -93,14 +91,13 @@ function Cart() {
                           ></path>
                         </svg>
                       </button>
-                    
 
                       <span className="absolute left-4 top-4 rounded-full bg-black p-2 text-white">
                         ${price}
                       </span>
                       <div className="mt-6 mb-10">
                         <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 ">
-                          <p className="text-sm text-slate-900">
+                          <p className="text-sm text-slate-900 dark:text-white ">
                             {description}
                           </p>
                         </div>
@@ -109,7 +106,7 @@ function Cart() {
                   </a>
 
                   <div className="p-6 ">
-                    <h3 className="mb-3 text-sm font-bold text-gray-800">
+                    <h3 className="mb-3 text-sm font-bold text-gray-800 dark:text-white dark:bg-slate-900 ">
                       {title}
                     </h3>
 
@@ -147,8 +144,6 @@ function Cart() {
                         />
                       </svg>
                     </button>
-
-                    
                   </div>
                 </div>
               </div>

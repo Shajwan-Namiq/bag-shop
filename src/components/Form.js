@@ -2,10 +2,10 @@
 
  function Form() {
    return (
-     <div className=" bg-white">
-       <div className=" py-10 text-slate-900">
-         <div className="border-2 rounded-lg  px-2 py-5 mx-auto max-w-2xl ">
-           <h1 className="border-b-2 pb-4 mb-10  text-lg font-bold   text-slate-900 text-center uppercase">
+     <div className=" bg-white dark:bg-slate-900 ">
+       <div className="mx-2 py-10 text-slate-900  dark:text-white">
+         <div className="px-4 border-2 rounded-lg  py-5 mx-auto max-w-2xl ">
+           <h1 className="border-b-2 pb-4 mb-10  text-lg font-bold   text-slate-900 dark:text-white text-center uppercase">
              Checkout
            </h1>
 
@@ -161,7 +161,7 @@
 
              <div className="col-span-6">
                <button
-                 className="block w-full rounded-lg bg-black p-2.5 text-sm text-white"
+                 className="block w-full rounded-lg bg-black dark:bg-red-800 p-2.5 text-sm text-white"
                  type="submit"
                >
                  Pay Now

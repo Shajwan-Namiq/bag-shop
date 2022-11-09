@@ -7,56 +7,68 @@ function Checkout({quantity, price}){
 
   return (
     <div>
-      <div class="text-white bg-slate-900 shadow-lg mt-0 px-2  w-full">
+      <div className="rounded-lg text-white bg-slate-900 dark:bg-white dark:text-slate-900 dark:border-red-800  shadow-lg mt-0 px-2  w-full">
         <div>
-          <h2 class="border-b-2 py-4 flex justify-center text-lg font-bold ">
+          <h2 className="border-b-2 py-4 flex justify-center text-lg font-bold ">
             Purchase Summary
           </h2>
 
-          <div class="mx-2 rounded  py-8">
-            <div class=" ">
-              <div class="flex items-end">
+          <div className="mx-2 rounded  py-8">
+            <div className=" ">
+              <div className="flex items-end">
                 <p
-                  class="text-sm font-medium focus:outline-none  "
+                  className="text-sm font-medium focus:outline-none  "
                   name=""
                   id=""
                 >
                   Items
                 </p>
-                <span class=" text-sm ml-auto font-bold">{quantity} items</span>
+                <span className=" text-sm ml-auto font-bold">
+                  {quantity} items
+                </span>
               </div>
             </div>
-            <div class="  mt-4">
-              <div class="flex items-end justify-between">
-                <span class="text-sm font-semibold">Delivery Charges</span>
-                <span class="text-sm  mb-px">Free</span>
+            <div className="  mt-4">
+              <div className="flex items-end justify-between">
+                <span className="text-sm font-semibold">Delivery Charges</span>
+                <span className="text-sm  mb-px">Free</span>
               </div>
             </div>
-            <div class=" mt-4   pt-4">
-              <div class="flex items-end justify-between">
-                <span class="font-semibold">Total</span>
-                <span class="font-bold text-red-900">${price}</span>
+            <div className=" mt-4   pt-4">
+              <div className="flex items-end justify-between">
+                <span className="font-semibold">Total</span>
+                <span className="font-bold text-red-900">${price}</span>
               </div>
             </div>
-            <div class="flex items-center  mt-8">
+            <div className="flex items-center  mt-8">
               <input id="termsConditions" type="checkbox" />
-              <label class="text-xs text-gray-500 ml-1">
+              <label className="text-xs text-gray-500 ml-1">
                 I agree to the terms and conditions.
               </label>
             </div>
-            <div class="flex flex-col  pt-4">
+            <div className="flex flex-col  pt-4">
               <button
                 onClick={() => navigate("/form")}
-                class="uppercase flex items-center justify-center bg-slate-200 text-base font-bold w-full h-10 rounded text-slate-900 hover:bg-red-900 hover:text-white"
+                className="uppercase flex items-center justify-center bg-slate-200 text-base font-bold w-full h-10 rounded text-slate-900 hover:bg-red-900 hover:text-white"
               >
                 Payment
               </button>
-              <button class="text-xs text-slate-500 mt-3 underline">
+              <button className="text-xs text-slate-500 mt-3 underline">
                 Free delivery for orders above $1000
               </button>
+
+                <button
+            onClick={() => navigate("/cartValue")}
+            className="mt-5 btn uppercase text-base font-bold border border-white hover:text-slate-900 text-white hover:bg-white bg-slate-900 btn-block h-10"
+          >
+            View cart
+          </button>
             </div>
           </div>
         </div>
+
+       
+
       </div>
     </div>
   );

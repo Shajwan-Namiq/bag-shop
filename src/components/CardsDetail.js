@@ -30,7 +30,7 @@ function CardsDetail({
 
   return (
     <>
-      <div className="bg-gray-50">
+      <div className="bg-gray-50 dark:text-white dark:bg-slate-900">
         <div className="mx-auto max-w-lg px-4 lg:px-8">
           <div className="mt-12">
             <div className="flow-root">
@@ -40,19 +40,19 @@ function CardsDetail({
                     <img
                       alt="name"
                       src={image}
-                      className="h-32 w-32    flex-shrink-0 rounded-lg object-cover"
+                      className="h-32 w-32 flex-shrink-0 rounded-lg object-cover"
                     />
 
-                    <div className="ml-4 text-slate-900">
+                    <div className="ml-4 text-slate-900 dark:text-white dark:bg-slate-900">
                       <p className="text-sm">{title}</p>
 
                       <dl className="mt-2 space-y-2 text-xs text-gray-500">
                         <div>
                           <dt className="inline text-gray-400 ">category: </dt>
-                          <dd className="inline">{category}</dd>
+                          <dd className="inline dark:text-white">{category}</dd>
                         </div>
 
-                        <div className="text-gray-400 mt-2 flex">
+                        <div className="text-gray-400  mt-2 flex">
                           Rating {rating.rate} {"  "}:
                           <ReactStars
                             count={5}
@@ -74,7 +74,7 @@ function CardsDetail({
 
                         <div>
                           <div className="flex my-3 ">
-                            <p className="inline text-gray-400">Quantity: </p>
+                            <p className="inline text-gray-400 ">Quantity: </p>
                             <div className="flex px-3">
                               <button
                                 onClick={() => dispatch(decrementQuantity(id))}
@@ -86,7 +86,7 @@ function CardsDetail({
                                   <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                                 </svg>
                               </button>
-                              <p className="mx-2 border text-center w-8">
+                              <p className="dark:text-white mx-2 border text-center w-8">
                                 {quantity}
                               </p>
                               <button

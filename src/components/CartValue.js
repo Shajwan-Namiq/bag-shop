@@ -4,22 +4,22 @@ import { useSelector } from "react-redux";
 import Bag from "./image/bag.png";
 import Total from "./Total";
  
-function CartValue(quantity, price) {
+function CartValue() {
   const cart = useSelector((state) => state.cart);
 
   return (
-    <div className="cart bg-white py-20">
+    <div className="cart bg-white dark:text-white dark:bg-slate-900 py-20">
       <section>
-        <div class="relative mx-auto max-w-screen-2xl">
-          <div class="grid grid-cols-1 md:grid-cols-2">
+        <div className="relative mx-auto max-w-screen-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="cart__left lg:mt-5">
               <div>
-                <h3 className="text-center text-slate-900 font-bold text-lg">
+                <h3 className="text-center text-slate-900 dark:text-white dark:bg-slate-900 font-bold text-lg">
                   Shopping Cart
                 </h3>
 
                 {cart.length === 0 ? (
-                  <div class="animate-bounce empty-cart mt-32 relative flex justify-center">
+                  <div className="animate-bounce empty-cart mt-32 relative flex justify-center">
                     <span className="absolute font-bold text-2xl text-red-500 bottom-20  ">
                       The Cart Is Empty
                     </span>

@@ -16,7 +16,7 @@ function Favourite() {
                 </h3>
 
                 <>
-                  {cart?.map((item) =>  {
+                  {cart?.map((item) => {
                     return (
                       <div key={item.id}>
                         <p>{item.title}</p>
@@ -25,8 +25,8 @@ function Favourite() {
                         <img src={item.image} alt="img" />
                       </div>
                     );
- } )}
-                </>  
+                  })}
+                </>
               </div>
             </div>
           </div>
