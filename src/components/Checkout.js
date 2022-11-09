@@ -7,13 +7,13 @@ function Checkout({quantity, price}){
 
   return (
     <div>
-      <div className="rounded-lg text-white bg-slate-900 dark:bg-white dark:text-slate-900 dark:border-red-800  shadow-lg mt-0 px-2  w-full">
+      <div className="rounded-lg text-white bg-slate-900 dark:bg-white dark:text-slate-900 dark:border-red-800    mt-0 px-2  w-full">
         <div>
           <h2 className="border-b-2 py-4 flex justify-center text-lg font-bold ">
             Purchase Summary
           </h2>
 
-          <div className="mx-2 rounded  py-8">
+          <div className="mx-2 rounded py-8">
             <div className=" ">
               <div className="flex items-end">
                 <p
@@ -56,19 +56,10 @@ function Checkout({quantity, price}){
               <button className="text-xs text-slate-500 mt-3 underline">
                 Free delivery for orders above $1000
               </button>
-
-                <button
-            onClick={() => navigate("/cartValue")}
-            className="mt-5 btn uppercase text-base font-bold border border-white hover:text-slate-900 text-white hover:bg-white bg-slate-900 btn-block h-10"
-          >
-            View cart
-          </button>
             </div>
           </div>
         </div>
-
-       
-
+        
       </div>
     </div>
   );

@@ -48,20 +48,19 @@ function toggleDarkMode() {
           </div>
 
           <div className="flex-none">
-            <div onClick={toggleDarkMode}>
+           
+            <div onClick={toggleDarkMode}  className="p-3 mr-2 bg-slate-700 hover:bg-slate-900 rounded-full">
               <button className="absolute flex items-center justify-center text-sm transition-all dark:opacity-0">
-                <FontAwesomeIcon className="mr-2" icon={faMoon} />
-                Dark Mode
+                <FontAwesomeIcon className="text-2xl" icon={faMoon} />
               </button>
               <button className="flex opacity-0 items-center justify-center text-sm transition-all dark:opacity-100">
-                <FontAwesomeIcon className="mr-2" icon={faSun} />
-                Light Mode
+                <FontAwesomeIcon className="text-2xl" icon={faSun} />
               </button>
             </div>
 
             <Link
               to="/favourite"
-              className="hover:bg-gray-900 bg-opacity-80 p-3 rounded-full"
+              className="bg-opacity-80 hover:bg-gray-900 p-3  rounded-full"
             >
               <svg
                 width="24px"
@@ -110,14 +109,21 @@ function toggleDarkMode() {
 
               <div
                 tabIndex={0}
-                className="rounded-lg mt-5 card card-compact dropdown-content  w-80 bg-slate-900 shadow"
+                className="rounded-lg mt-5 card card-compact dropdown-content  w-80 bg-slate-900 dark:bg-white shadow"
               >
                 <div className=" card-body">
                   <span className="text-info">
                     {" "}
                     <Total />
                   </span>
-                 
+                  <div className="mx-4 card-actions">
+                    <button
+                      onClick={() => navigate("/cartValue")}
+                      className="btn uppercase text-base font-bold border border-white hover:text-slate-900 text-white hover:bg-white bg-slate-900 btn-block"
+                    >
+                      View cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

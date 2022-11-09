@@ -1,6 +1,6 @@
-  import Checkout from "./Checkout";
+import Checkout from "./Checkout";
 import { useSelector } from "react-redux";
- 
+
 function Total() {
   const cart = useSelector((state) => state.cart);
 
@@ -15,13 +15,10 @@ function Total() {
   };
 
   return (
-    
-          <Checkout
-            quantity={getTotal().totalQuantity}
-            price={getTotal().totalPrice}
-          />
-          
-       
+    <Checkout
+      quantity={getTotal().totalQuantity}
+      price={getTotal().totalPrice}
+    />
   );
 }
 
