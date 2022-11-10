@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 //import Bag from "./image/bag.png";
 
 function Favourite() {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.wishlist);
 
   return (
     <div className="cart bg-white py-20">
